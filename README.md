@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # AccountSignal
 
 **Know which accounts to contact first, and why now.**
@@ -10,7 +11,10 @@ evidence.
 
 > Olostep does the research. Your app makes the GTM decision.
 
-<!-- Add a demo GIF here: docs/demo.gif -->
+[![Watch the 100-second demo with voice-over](client/public/demo/accountsignal-demo-poster.jpg)](client/public/demo/accountsignal-demo.mp4)
+
+▶ **[Watch the 100-second demo](client/public/demo/accountsignal-demo.mp4)** (voice-over and captions). It also plays
+at the top of the dashboard. How it was made: [`docs/video`](docs/video/README.md).
 
 ## Try it in 2 minutes (no API key needed)
 
@@ -208,5 +212,7 @@ manager per checkout: delete `node_modules` before switching.
 
 MIT
 =======
+
 # AccountSignal_Olostep
->>>>>>> b359a6bd7a8cc8c55b4f7c3e39a056b2a21fec60
+
+> > > > > > > b359a6bd7a8cc8c55b4f7c3e39a056b2a21fec60

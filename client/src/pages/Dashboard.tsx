@@ -27,27 +27,14 @@ import {
   Skeleton,
   Stat,
 } from "../components/common/ui";
-import {
-  PRIORITY_COLOR,
-  PriorityBar,
-  PriorityMatrix,
-  type MatrixPoint,
-} from "../components/visuals";
+import { DemoVideo } from "../components/DemoVideo";
+import { PriorityBar } from "../components/visuals";
 import { useConnection } from "../hooks/useConnection";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { usePolling } from "../hooks/usePolling";
 import { formatCount, formatUsd, timeAgo } from "../lib/format";
 import { ACTIVE, type AppConfig, type Run } from "../lib/types";
 import { api, errorMessage } from "../services/api";
-
-const HERO_POINTS: MatrixPoint[] = [
-  { key: "a", label: "Nimbus", fit: 86, timing: 82, priority: "Act now" },
-  { key: "b", label: "Harbor", fit: 80, timing: 30, priority: "Nurture" },
-  { key: "c", label: "Quillbyte", fit: 40, timing: 74, priority: "Watch" },
-  { key: "d", label: "Orbitly", fit: 72, timing: 62, priority: "Act now" },
-  { key: "e", label: "Kestrel", fit: 25, timing: 18, priority: "Skip" },
-  { key: "f", label: "Lumen", fit: 66, timing: 22, priority: "Nurture" },
-];
 
 const STAGES = [
   {
@@ -138,32 +125,8 @@ export function Dashboard({ config }: { config: AppConfig }) {
             </p>
           </div>
 
-          <div className="float hidden sm:block">
-            <div className="overflow-hidden rounded-2xl border border-white/80 bg-white/85 shadow-(--shadow-pop) backdrop-blur">
-              <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
-                <span className="flex gap-1.5" aria-hidden="true">
-                  <span className="size-2.5 rounded-full bg-line-strong" />
-                  <span className="size-2.5 rounded-full bg-line-strong" />
-                  <span className="size-2.5 rounded-full bg-line-strong" />
-                </span>
-                <span className="text-xs text-muted">Priority matrix</span>
-                <span className="text-[11px] text-faint">example</span>
-              </div>
-              <div className="p-4">
-                <PriorityMatrix points={HERO_POINTS} interactive={false} />
-                <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted">
-                  {(["Act now", "Nurture", "Watch", "Skip"] as const).map((p) => (
-                    <span key={p} className="inline-flex items-center gap-1.5">
-                      <span
-                        className="size-2 rounded-full"
-                        style={{ background: PRIORITY_COLOR[p].fg }}
-                      />
-                      {p}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="animate-in" style={{ animationDelay: "120ms" }}>
+            <DemoVideo />
           </div>
         </div>
 

@@ -12,6 +12,11 @@ export default tseslint.config(
     languageOptions: { globals: globals.node },
   },
   {
+    // Demo-video recorder: Node script that also runs snippets inside the page.
+    files: ["docs/video/**/*.mjs"],
+    languageOptions: { globals: { ...globals.node, ...globals.browser } },
+  },
+  {
     files: ["client/**/*.{ts,tsx}"],
     languageOptions: { globals: globals.browser },
     plugins: { "react-hooks": reactHooks },

@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00:00.133 --> 00:00:04.049
+This is AccountSignal, an open-source app built on Olostep.
+
+00:00:04.049 --> 00:00:08.989
+You upload a list of companies, and it tells you which accounts to contact first, and why now.
+
+00:00:09.787 --> 00:00:17.849
+First, define your ideal customer: industries, locations, company size, tech stack, funding stage, and hiring.
+
+00:00:17.849 --> 00:00:20.386
+Every account is scored against this profile.
+
+00:00:21.192 --> 00:00:24.735
+Next, upload a CSV with company names and domains.
+
+00:00:24.735 --> 00:00:28.209
+Contact emails are optional, and they never leave your server.
+
+00:00:29.021 --> 00:00:37.516
+AccountSignal detects the columns automatically, validates every row, groups duplicates, and shows exactly which companies will be researched.
+
+00:00:38.648 --> 00:00:41.326
+Before anything is spent, you see the cost.
+
+00:00:41.326 --> 00:00:46.350
+About twenty Olostep credits of research per company, plus a few for evidence checks.
+
+00:00:46.350 --> 00:00:49.174
+Without an API key, you can still try the demo.
+
+00:00:49.979 --> 00:00:51.034
+Let's run the demo.
+
+00:00:51.034 --> 00:00:54.352
+For each company, Olostep Answers does the research.
+
+00:00:54.352 --> 00:00:58.715
+Then Search and Scrape open each buying signal's source, to check it is real.
+
+00:00:58.715 --> 00:01:02.873
+Finally, it scores ICP fit and timing, and writes a brief.
+
+00:01:03.663 --> 00:01:08.889
+Accounts are ranked into four groups: Act now, Nurture, Watch, and Skip.
+
+00:01:08.889 --> 00:01:14.165
+The priority matrix plots fit against timing, and the board shows who to contact first.
+
+00:01:14.971 --> 00:01:20.930
+Open any account to see its brief: why it fits, why now, the gaps, and what to check next.
+
+00:01:20.930 --> 00:01:25.834
+Every signal shows its date, its source, and whether the evidence was verified.
+
+00:01:26.639 --> 00:01:29.714
+Export everything as CSV or JSON.
+
+00:01:29.714 --> 00:01:35.254
+Try the demo with no API key, or add your Olostep key to analyse real companies.
+
+00:01:35.254 --> 00:01:37.045
+Olostep does the research.
+
+00:01:37.045 --> 00:01:39.149
+AccountSignal makes the decision.

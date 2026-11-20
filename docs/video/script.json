@@ -1,0 +1,38 @@
+[
+  {
+    "id": "intro",
+    "text": "This is AccountSignal, an open-source app built on Olostep. You upload a list of companies, and it tells you which accounts to contact first, and why now."
+  },
+  {
+    "id": "icp",
+    "text": "First, define your ideal customer: industries, locations, company size, tech stack, funding stage, and hiring. Every account is scored against this profile."
+  },
+  {
+    "id": "upload",
+    "text": "Next, upload a CSV with company names and domains. Contact emails are optional, and they never leave your server."
+  },
+  {
+    "id": "preview",
+    "text": "AccountSignal detects the columns automatically, validates every row, groups duplicates, and shows exactly which companies will be researched."
+  },
+  {
+    "id": "review",
+    "text": "Before anything is spent, you see the cost. About twenty Olostep credits of research per company, plus a few for evidence checks. Without an API key, you can still try the demo."
+  },
+  {
+    "id": "run",
+    "text": "Let's run the demo. For each company, Olostep Answers does the research. Then Search and Scrape open each buying signal's source, to check it is real. Finally, it scores ICP fit and timing, and writes a brief."
+  },
+  {
+    "id": "results",
+    "text": "Accounts are ranked into four groups: Act now, Nurture, Watch, and Skip. The priority matrix plots fit against timing, and the board shows who to contact first."
+  },
+  {
+    "id": "account",
+    "text": "Open any account to see its brief: why it fits, why now, the gaps, and what to check next. Every signal shows its date, its source, and whether the evidence was verified."
+  },
+  {
+    "id": "outro",
+    "text": "Export everything as CSV or JSON. Try the demo with no API key, or add your Olostep key to analyse real companies. Olostep does the research. AccountSignal makes the decision."
+  }
+]
