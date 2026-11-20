@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AccountSignal
 
 **Know which accounts to contact first, and why now.**
@@ -206,3 +207,6 @@ manager per checkout: delete `node_modules` before switching.
 ## License
 
 MIT
+=======
+# AccountSignal_Olostep
+>>>>>>> b359a6bd7a8cc8c55b4f7c3e39a056b2a21fec60
