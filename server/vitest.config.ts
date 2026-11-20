@@ -1,0 +1,10 @@
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    environment: "node",
+    include: ["test/**/*.test.ts"],
+    env: { NODE_ENV: "test", LOG_LEVEL: "silent", DATA_FILE: "" },
+    testTimeout: 20_000,
+  },
+});

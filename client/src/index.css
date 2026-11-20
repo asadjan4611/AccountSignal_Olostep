@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+/*
+ * AccountSignal design language: Olostep's white surfaces, sky-blue atmosphere and one
+ * confident blue, plus a four-colour priority system (Act now, Nurture, Watch, Skip).
+ */
+:root {
+  --brand: #1369e6;
+  --brand-hover: #0f5ad0;
+  --brand-soft: #eaf2fe;
+  --brand-ink: #0b4bb3;
+  --ink: #26251e;
+  --ink-2: #3f3e37;
+  --muted: #6f6f6f;
+  --faint: #a3a3a3;
+  --line: #e5e7eb;
+  --line-strong: #d1d1d1;
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --seg: #f3f3f5;
+  --sky: #e7f2fa;
+  --good: #15803d;
+  --good-soft: #e9f7ee;
+  --warn: #b45309;
+  --warn-soft: #fdf4e3;
+  --bad: #c62828;
+  --bad-soft: #fdecec;
+
+  /* Priorities */
+  --act: #1369e6;
+  --act-soft: #eaf2fe;
+  --nurture: #0d9488;
+  --nurture-soft: #e7f6f4;
+  --watch: #d97706;
+  --watch-soft: #fdf4e3;
+  --skip: #9ca3af;
+  --skip-soft: #f3f4f6;
+
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-ink: var(--brand-ink);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-seg: var(--seg);
+  --color-sky: var(--sky);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-act: var(--act);
+  --color-act-soft: var(--act-soft);
+  --color-nurture: var(--nurture);
+  --color-nurture-soft: var(--nurture-soft);
+  --color-watch: var(--watch);
+  --color-watch-soft: var(--watch-soft);
+  --color-skip: var(--skip);
+  --color-skip-soft: var(--skip-soft);
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-display: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.04), 0 8px 24px -12px rgb(16 24 40 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(16 24 40 / 0.04), 0 16px 32px -16px rgb(16 24 40 / 0.22);
+  --shadow-pop: 0 12px 40px -12px rgb(16 24 40 / 0.28);
+  --shadow-button: 0 2px 5px rgb(0 0 0 / 0.2);
+  --shadow-seg: 0 1px 3px rgb(0 0 0 / 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-soft);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(19 105 230 / 0.18);
+}
+
+/* ── Atmosphere ─────────────────────────────────────────────────────────── */
+
+/* Soft sky backdrop, like Olostep's hero. */
+.sky {
+  background:
+    radial-gradient(60% 50% at 18% 20%, rgb(255 255 255 / 0.9) 0%, transparent 60%),
+    radial-gradient(45% 40% at 82% 30%, rgb(255 255 255 / 0.75) 0%, transparent 65%),
+    radial-gradient(70% 60% at 50% 100%, rgb(255 255 255 / 1) 10%, transparent 70%),
+    linear-gradient(180deg, #d6e6f6 0%, #e4effa 45%, #f6f9fd 100%);
+}
+
+/* Faint dot grid used behind hero visuals. */
+.bg-dots {
+  background-image: radial-gradient(rgb(19 105 230 / 0.13) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.text-gradient {
+  background: linear-gradient(92deg, #1369e6 0%, #3b82f6 45%, #0d9488 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgb(255 255 255 / 0.74);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────────── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.animate-in {
+  animation: fade-up 320ms ease-out both;
+}
+
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.35;
+  }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+@keyframes ping-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+.ping-ring {
+  animation: ping-ring 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+.pop-in {
+  animation: pop-in 480ms cubic-bezier(0.2, 0.9, 0.3, 1.25) both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes ring-draw {
+  from {
+    stroke-dashoffset: var(--ring-circ);
+  }
+}
+.ring-draw {
+  animation: ring-draw 900ms cubic-bezier(0.3, 0.7, 0.2, 1) both;
+}
+
+@keyframes stripes {
+  to {
+    background-position: 28px 0;
+  }
+}
+.progress-stripes {
+  background-image: linear-gradient(
+    45deg,
+    rgb(255 255 255 / 0.28) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgb(255 255 255 / 0.28) 50%,
+    rgb(255 255 255 / 0.28) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 28px 28px;
+  animation: stripes 0.9s linear infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--seg);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.75), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+.toast-in {
+  animation: toast-in 220ms ease-out;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
